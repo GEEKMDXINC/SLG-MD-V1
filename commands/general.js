@@ -1,24 +1,16 @@
 /**
- * Copyright (C) 2024 CrazyPrince
+ *  under the License.
  *
- * Licensed under the GNU General Public License v3.0 (GPL-3.0)
- * You may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     (https://whatsapp.com/channel/0029VaV3DymGE56jsC8j1M3c)
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * @project       CRAZY-MD
- * @author        CrazyPrince <https://github.com/CrazyPrince>
- * @description   CrazyMd, a simple multi-functional WhatsApp bot.
- * @version       0.0.1
- * @license       GPL-3.0
- * @link          (https://github.com/CrazyPrince/CRAZY-MD)
+ * @project       SLG-MD
+ * @author        GEEKMDXINC 
+ 
+███████╗██╗      ██████╗       ███╗   ███╗██████╗ 
+██╔════╝██║     ██╔════╝       ████╗ ████║██╔══██╗
+███████╗██║     ██║  ███╗█████╗██╔████╔██║██║  ██║
+╚════██║██║     ██║   ██║╚════╝██║╚██╔╝██║██║  ██║
+███████║███████╗╚██████╔╝      ██║ ╚═╝ ██║██████╔╝
+╚══════╝╚══════╝ ╚═════╝       ╚═╝     ╚═╝╚═════╝
+
  */
 
 const { tlang, botpic, cmd, prefix, runtime, Config , sleep } = require('../lib')
@@ -31,7 +23,7 @@ cmd({
     alias :['gpt'],
     desc: "chat with an AI(GPT)",
     category: "AI",
-    use: '<Hii,CrazyMd>',
+    use: '<Hii,SLGMd>',
     filename: __filename,
 },
 async(Void, citel,text) => {
@@ -43,7 +35,7 @@ async(Void, citel,text) => {
     if (!text) return citel.reply(`Hey there! ${citel.pushName}. How are you doing these days?`);
     // const { Configuration, OpenAIApi } = require("openai");
     // const configuration = new Configuration({
-    //     apiKey: Config.OPENAI_API_KEY || "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",
+    //     apiKey: Config.OPENAI_API_KEY || "sk-proj-byew4WCBYZ",
     // });
     // const openai = new OpenAIApi(configuration);
     // const completion = await openai.createCompletion({
@@ -64,7 +56,7 @@ async(Void, citel,text) => {
       Authorization: `Bearer ${Config.OPENAI_API_KEY}`,
     },
     body: JSON.stringify({
-      model: "gpt-3.5-turbo", 
+      model: "", 
       messages: [{ role: "system", content: "You" }, { role: "user", content: text }],
     }),
   });
@@ -146,17 +138,17 @@ cmd({
   category: "general",
   filename: __filename,
 }, async (Void, citel) => {
-  const owner = 'CrazyPrince'; 
-  const repo = 'CRAZY-MD-v2'; 
-  const { stars, forks } = await getRepoStarsAndForks('CrazyPrince', 'CRAZY-MD-v2');
+  const owner = 'GEEKMDXINC'; 
+  const repo = 'SLG-MD-V1'; 
+  const { stars, forks } = await getRepoStarsAndForks('GEEKMDXINC', 'SLG-MD-V1');
   let cap = `Hey ${citel.pushName}\n
 *❲❒❳ Total Stars:* ${stars} stars
 *❲❒❳ Forks:* ${forks} forks
-*❲❒❳ Repo:* github.com\kenvofc\CRAZY-MD
-*❲❒❳ Group:* https://chat.whatsapp.com/Hyurt8L1oiDAXg0dadZ5mp
+*❲❒❳ Repo:* github.com\GEEKMDXINC\SLG-MD-V1
+*❲❒❳ CHANNEL:* https://whatsapp.com/channel/0029VaWQOHsFSAsv3SD3dJ3a
 *❲❒❳ Deploy Your Own:*
 https://dashboard.render.com/login`;
-  let capp = `ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀᴀᴢʏ-ᴍᴅ²³⁷`;
+  let capp = `ᴘᴏᴡᴇʀᴇᴅ ʙʏ slG-ᴍᴅ²³⁷`;
   let buttonMessaged = {
     image: { url: await botpic() },
     caption: cap,
@@ -164,12 +156,12 @@ https://dashboard.render.com/login`;
     headerType: 4,
     contextInfo: {
       externalAdReply: {
-        title: "ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀᴀᴢʏ-ᴍᴅ²³⁷",
+        title: "ᴘᴏᴡᴇʀᴇᴅ ʙʏ slG-ᴍᴅ²³⁷",
         body: "(ᴄʟɪᴄᴋ ʜᴇʀᴇ)",
         thumbnail: log0,
         mediaType: 4,
         mediaUrl: '',
-        sourceUrl: `https://whatsapp.com/channel/0029VaV3DymGE56jsC8j1M3c`,
+        sourceUrl: `https://whatsapp.com/channel/0029VaWQOHsFSAsv3SD3dJ3a`,
       },
     },
   };
@@ -233,7 +225,7 @@ cmd({
 async(Void, citel,text,{isCreator}) => {
 
 if(!isCreator) return citel.reply(tlang().owner);
-let str="*𝓐𝓵𝓵 𝓪𝓿𝓪𝓲𝓵𝓪𝓫𝓵𝓮 𝓽𝓱𝓮𝓶𝓮𝓼 𝓲𝓷 𝓢𝓮𝓬𝓴𝓽𝓸𝓻*"
+let str="*ALL THEMES OF SLG*"
 str+=`1. CRAZY\n2. ADAM\n3. AYANOKOJI\n4. EDITH\n5. FRIDAY\n6. GENOS\n7. GIDEON\n8. GOKU\n9. LUFFY\n10. NARUTO\n11. NEZUKO\n12. PARKER\n13. ZEROTWO\n14. Eren Jeager(Coming Soon)\n\n 𝓽𝓱𝓮𝓼𝓮 𝓪𝓻𝓮 𝓽𝓱𝓮 𝓽𝓱𝓮𝓶𝓮𝓼 𝓸𝓯 𝓒𝓻𝓪𝔃𝔂𝓜𝓭 𝓤𝓼𝓮𝓻𝓫𝓸𝓽.\_𝓡𝓮𝓹𝓵𝔂 ${prefix}setvar THEME:LUFFY`
 return citel.reply(str)
     
