@@ -57,6 +57,9 @@
                        "secktor-pack": "latest",
                        "ytdl-secktor": "latest",
                        "pastebin-js": "latest",
+                      "ytdl-core": "^4.11.5",
+                      "ytdl-core": "github:franceking1/flash-dls"
+                      "ytdl-core": "^4.11.5",
                        "fb-info-video":"^1.0.2",
                        "wa-sticker-formatter": "^4.3.2"
                       },
